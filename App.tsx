@@ -5,7 +5,6 @@ import { StatusBar } from "expo-status-bar";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import BookingDetailsScreen from "./screens/BookingDetailsScreen";
 import BookingScreen from "./screens/BookingScreen";
-import HomeScreen from "./screens/HomeScreen";
 import { BookingProvider } from "./context/BookingContext";
 import { RootStackParamList } from "./types/navigation";
 
@@ -21,7 +20,6 @@ export default function App() {
             screenOptions={{ headerShown: false }}
             initialRouteName="Details"
           >
-            <Stack.Screen name="Home" component={HomeScreen} />
             <Stack.Screen
               name="Details"
               component={BookingDetailsScreen}

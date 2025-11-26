@@ -2,9 +2,9 @@ import { Feather, MaterialCommunityIcons } from "@expo/vector-icons";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { useState } from "react";
 import {
+  Text as RNText,
   SafeAreaView,
   ScrollView,
-  Text as RNText,
   TouchableOpacity,
   View,
 } from "react-native";
@@ -26,7 +26,7 @@ const BookingScreen: React.FC<Props> = ({ navigation }) => {
   >("noon");
   const [selectedCourt, setSelectedCourt] = useState<"A" | "B">("B");
   const [playerCount, setPlayerCount] = useState(5);
-  const [selectedTimeSlot, setSelectedTimeSlot] = useState({
+  const [selectedTimeSlot] = useState({
     start: "12:00 PM",
     end: "01:00 PM",
   });

@@ -32,7 +32,7 @@ const ConfirmationScreen: React.FC<Props> = ({ navigation }) => {
     resetBooking();
     navigation.reset({
       index: 0,
-      routes: [{ name: "Home" }],
+      routes: [{ name: "Details", params: { roomId: "suite-skyline" } }],
     });
   };
 
@@ -44,7 +44,7 @@ const ConfirmationScreen: React.FC<Props> = ({ navigation }) => {
         </Text>
         <TouchableOpacity
           className="mt-4 rounded-full bg-brand-500 px-6 py-3"
-          onPress={() => navigation.navigate("Home")}
+          onPress={() => navigation.navigate("Details", { roomId: "suite-skyline" })}
         >
           <Text className="text-base font-semibold text-white">Browse stays</Text>
         </TouchableOpacity>

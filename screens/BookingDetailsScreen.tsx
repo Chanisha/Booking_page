@@ -164,7 +164,11 @@ const BookingDetailsScreen: React.FC<Props> = ({ route, navigation }) => {
                   {room.title}
                 </Text>
                 {room.verified && (
-                  <Feather name="check-circle" size={20} color="#10b981" />
+                  <Image
+                    source={require("../assets/images/verify.png")}
+                    style={{ width: 20, height: 20 }}
+                    resizeMode="contain"
+                  />
                 )}
               </View>
             </View>
